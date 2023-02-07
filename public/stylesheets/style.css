@@ -1,8 +1,97 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: #424748;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr 4fr;
+  grid-template-areas: 
+    "nav"
+    "main"
 }
 
 a {
   color: #00B7FF;
+}
+
+#show-page {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  grid-gap: 2fr;
+  padding: 20px;
+}
+
+body > nav {
+  grid-area: nav;
+  background-color: #B8C0C2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#main-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#show-page > div {
+  display: flex;
+  font-weight: bold;
+  background-color: lightgray;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vh;
+}
+#new-form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+  justify-content: center;
+}
+
+#new-form * {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bolder;
+  justify-content: center;
+}
+
+#new-form input[type="submit"] {
+  grid-column: span 2;
+  width: 12vw;
+  margin: auto;
+}
+
+table {
+  font-size: 20px;
+}
+
+table thead th {
+  padding: 5px;
+  border-bottom: 2px solid #424748;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+nav > a:hover:not(.active) {
+  color: white;
+  background-color: #424748;
 }
