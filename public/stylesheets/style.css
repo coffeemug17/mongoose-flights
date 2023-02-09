@@ -172,3 +172,7 @@ li {
   justify-content: center;
   height: 1vh
 }
+
+#add-ticket {
+  text-decoration: none;
+}
